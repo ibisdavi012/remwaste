@@ -4,7 +4,7 @@
 
 * The header contains back/continue buttons and the current step of the multistep booking process. Additionally, the previous and next step are shown.
 
-* The new layout splits horizontally the main content area. On the left the user can scroll to see the options, while on the right side, they see the current selected element. 
+* The new layout splits horizontally the main content area. On the left, the user can scroll to see the options, while on the right side, they see the current selected element. 
 
 * On Top of the list, there is a combobox which allows the user to sort the list by size and price.
 
@@ -33,6 +33,9 @@
 * The current selected item is clearly visible on the right of the screen.
 * Additional performance on image, error handling, and loading were introduced.
 
-Screen Shots:
-* [Desktop](https://i.ibb.co/nNkjNZWV/desktop-view.png)
-* [Mobile](https://i.ibb.co/sJ9MwPp6/mobile-view.png)
+## Screenshots
+### Desktop
+![Desktop](screenshots/desktop_view.png)
+
+### Mobile
+* ![Mobile](screenshots/mobile_view.png)
