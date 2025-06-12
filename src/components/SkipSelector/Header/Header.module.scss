@@ -1,0 +1,97 @@
+@import '../../../styles/_variables.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.2rem 2rem 1.2rem 1rem;
+  background: #fff;
+  border-bottom: 2px solid $gray-light;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.step {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: $gray-dark;
+  opacity: 0.7;
+}
+
+.current {
+  color: $primary-black;
+  opacity: 1;
+  border-bottom: 2px solid $primary-yellow;
+  padding-bottom: 2px;
+}
+
+.button {
+  padding: 0.6rem 1.5rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  background: $primary-yellow;
+  color: $primary-black;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover:not(:disabled) {
+    background: darken($primary-yellow, 5%);
+  }
+}
+
+.button:disabled {
+  background: $gray-light;
+  color: $gray-dark;
+  cursor: not-allowed;
+}
+
+.back {
+  background: $gray-light;
+  color: $primary-black;
+  border: 1px solid $gray-dark;
+
+  &:hover:not(:disabled) {
+    background: darken($gray-light, 5%);
+  }
+}
+
+.backText {
+  display: inline;
+}
+
+@media (max-width: 900px) {
+  .back {
+    padding: 0.6rem;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &::after {
+      content: "←";
+      font-size: 1.2rem;
+    }
+  }
+
+  .backText {
+    display: none;
+  }
+
+  .stepper {
+    .step:not(.current) {
+      display: none;
+    }
+  }
+} 

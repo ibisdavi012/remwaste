@@ -1,0 +1,54 @@
+@import '../../../styles/_variables.scss';
+@import '../../../styles/mixins';
+
+.detailsContainer {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+.image {
+  max-width: 300px;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: $primary-black;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: $gray-dark;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: $primary-orange;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.label {
+  font-weight: 600;
+  color: $primary-black;
+}
+
+.value {
+  color: $primary-black;
+} 

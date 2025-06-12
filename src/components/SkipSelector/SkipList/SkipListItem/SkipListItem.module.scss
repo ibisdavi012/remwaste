@@ -1,0 +1,109 @@
+@import '../../../../styles/_variables.scss';
+
+.item {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "image textBlock priceBlock"
+    "tags tags tags";
+  gap: 0.3rem 1.2rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+  background: white;
+  outline: 2px solid $gray-light;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.2s, background 0.2s;
+}
+
+.item:hover {
+  border: 2px solid $primary-yellow;
+  background: #fffbe7;
+}
+
+.selected {
+  border: 2px solid $primary-orange;
+  background: #fffbe7;
+}
+
+.image {
+  grid-area: image;
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: $gray-dark;
+  align-self: center;
+}
+
+.textBlock {
+  grid-area: textBlock;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: $primary-black;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: $gray-dark;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.priceBlock {
+  grid-area: priceBlock;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: $primary-black;
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+
+.tags {
+  grid-area: tags;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 0.2rem;
+}
+
+.tag {
+  padding: 0.2rem 0.7rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: $primary-yellow;
+  color: $primary-black;
+}
+
+.notAllowed {
+  background: $error-red;
+  color: #fff;
+}
+
+.heavyWaste {
+  background: $primary-black;
+  color: $primary-yellow;
+} 

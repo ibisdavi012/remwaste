@@ -1,0 +1,24 @@
+@mixin custom-scrollbar($thumb-color: rgba($gray-dark, 0.3), $hover-color: rgba($gray-dark, 0.5)) {
+  /* Modern scrollbar styling */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $thumb-color;
+    border-radius: 3px;
+    transition: background 0.2s ease;
+    
+    &:hover {
+      background: $hover-color;
+    }
+  }
+
+  /* Firefox scrollbar styling */
+  scrollbar-width: thin;
+  scrollbar-color: $thumb-color transparent;
+} 

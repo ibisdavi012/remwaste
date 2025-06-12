@@ -1,0 +1,84 @@
+@import '../../../styles/_variables.scss';
+@import '../../../styles/mixins';
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.headerRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mainTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: $primary-black;
+  margin-bottom: 0.1rem;
+}
+
+.subTitle {
+  font-size: 0.98rem;
+  color: $gray-dark;
+  opacity: 0.8;
+  margin-bottom: 0.1rem;
+}
+
+.sortBar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 0rem;
+  gap: 1rem;
+}
+
+@media (max-width: 700px) {
+  .headerRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  .sortBar {
+    justify-content: flex-start;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sortBar label {
+    display: none;
+  }
+  .combobox {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+.combobox {
+  padding: 0.5rem 1rem;
+  border: 1px solid $gray-dark;
+  border-radius: 4px;
+  background: #fff;
+  color: $primary-black;
+}
+
+.scrollList {
+  overflow-y: auto;
+  max-height: 70vh;
+  padding-right: 0.5rem;
+  padding-top: 10px;
+  border-top: 2px solid $gray-light;
+
+  @include custom-scrollbar();
+} 
